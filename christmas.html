@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/christmas-tree.css">
+	<title>圣诞礼物</title>
+</head>
+<body>
+	<div id="app">
+		<div @click="changeBless();playMusic()" class="star-fire"></div>
+		<div class="main-box">
+			<div class="box-canvas">
+				<div>
+					<h3 class="title" :style="title_color">圣诞快乐</h3>
+				</div>
+				<div class="trunk"></div>
+				<div class="tree"></div>
+				<div class="star"></div>
+				<div class="lights-group bottom">
+					<div class="light"></div>
+					<div class="light"></div>
+					<div class="light"></div>
+					<div class="light"></div>
+					<div class="light"></div>
+				</div>
+				<div class="lights-group top">
+					<div class="light"></div>
+					<div class="light"></div>
+					<div class="light"></div>
+					<div class="light"></div>
+				</div>
+			</div>
+			<div class="bless-p">
+				<p :style="bless_color">{{blessing}}</p>
+			</div>
+		</div>
+		<video style="visibility: hidden;" id="music" controls="" autoplay="" name="media">
+			<source src="./music/christmas.mp3" type="audio/mpeg">
+		</video>
+	</div>
+	<script src="./js/vue.min.js"></script>
+	<script src="./js/jquery-1.11.0.min.js"></script>
+	<script src="./js/fire.js"></script>
+	<script src="./js/christmas.js"></script>
+</body>
+</html>
